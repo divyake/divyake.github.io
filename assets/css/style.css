@@ -1,17 +1,58 @@
 body {
     background-color: #fff;
 }
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
-.name {
+
+#line1{
+    
+white-space: pre;
+  overflow: hidden; 
+  font-family: 'Source Code Pro', monospace;  
+  color: rgba(0,0,0);
+  position: relative;
+}
+#border {
+  border-bottom: solid 3px rgba(0,0,0);
+  position: absolute;
+  right: -7px;
+  width: 20px;}
+
+/* Animation */
+#line1 {
+  animation: animated-text 2s steps(30,end) 1s 1 normal both
+}
+
+#border {
+   animation: animated-cursor 600ms steps(30,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 480px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-bottom-color: rgba(0,255,0,.75);}
+  to{border-bottom-color: transparent;}
+}
+
+#name {
     color: #22A39F;
     font-family: 'Playfair Display', serif;
-    font-size: 500%;
+    font-size: 400%;
     text-align: center;
     font-weight: lighter;
 }
 
 .term {
     box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.2);
+    height: 74vh;
+
 }
 
 .card .header {
@@ -52,8 +93,8 @@ body {
 
 .down {
     text-align: center;
-    margin-top: 5%;
-    font-size: 300%;
+    margin-top: 3%;
+    font-size: 280%;
 }
 
 
@@ -81,6 +122,10 @@ body {
         text-align: center;
         font-size: 200% !important;
         color: #22A39F;
+    }
+
+    #line1{
+        font-size: 12px;
     }
 }
 
